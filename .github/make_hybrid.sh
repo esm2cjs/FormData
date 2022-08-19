@@ -37,8 +37,8 @@ PJSON=$(cat package.json | jq --tab '
 ')
 echo "$PJSON" > package.json
 
+# Update package.json -> version if upstream forgot to update it
 if [[ ! -z "${TAG}" ]] ; then
-	# Make sure the version matches the tag
 	VERSION=$(echo "${TAG/v/}")
 	PJSON=$(cat package.json | jq --tab --arg VERSION "$VERSION" '.version = $VERSION')
 	echo "$PJSON" > package.json
