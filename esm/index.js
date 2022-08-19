@@ -1,7 +1,7 @@
 /*! formdata-polyfill. MIT License. Jimmy Wärting <https://jimmy.warting.se/opensource> */
 
-import C from 'fetch-blob'
-import F from 'fetch-blob/file.js'
+import C from '@esm2cjs/fetch-blob'
+import F from '@esm2cjs/fetch-blob/file.js'
 
 var {toStringTag:t,iterator:i,hasInstance:h}=Symbol,
 r=Math.random,
